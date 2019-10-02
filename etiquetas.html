@@ -5,18 +5,73 @@
     <style>
       * {
         font-family: "Open Sans", sans-serif;
-        font-size: 9pt;
+        font-size: 8pt;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .pageMargin {
+        width: 188mm;
+        height: 280mm;
+        
+        display: grid;
+        grid-template-columns: repeat(4, 47mm);
+        grid-template-rows: repeat(8, 35mm);
+
+        border-style: dashed;
+        border-width: thin;
+      }
+      .etiqueta > * {
+        border-style: dashed;
+        border-width: thin;
+        border-color: #ccc;
+      }
+      .etiquetaLadoGrande {
+        height: 15mm;
+        padding: 1mm;
+      }
+      .etiquetaLadoPequeno {
+        height: 5mm;
+        width: 47mm;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .etiquetaLadoGrandeVirado {
+        height: 15mm;
+        transform: rotate(-180deg);
+        padding: 1mm;
       }
       textarea {
         width: 47mm;
-      }
+        border-style: dashed;
+        resize: none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+      }*/
     </style>
   </head>
   <body>
     
-    <textarea>
-    teste
-    </textarea>
+    <div class=ferramentas style="display:grid;grid-template-columns: repeat(4, 47mm)">
+      <textarea rows=32></textarea>
+      <textarea rows=32></textarea>
+      <textarea rows=32></textarea>
+      <textarea rows=32></textarea>
+    </div>
     
+    <div class=pageMargin>
+      <div class=etiqueta>
+        <p class=etiquetaLadoGrande>Poder Legislativo</p>
+        <p class=etiquetaLadoPequeno>Poder Legislativo</p>
+        <p class=etiquetaLadoGrandeVirado>Poder Legislativo</p>
+      </div>
+      <div class=etiqueta>
+        
+        Gestão de Crise e Monitoramento de Riscos à Imagem Institucional</div>
+      <div class=etiqueta>abc</div>
+      <div class=etiqueta>abc</div>
+    </div>
   </body>
 </html>
